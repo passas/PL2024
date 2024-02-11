@@ -10,7 +10,7 @@ if __name__ == '__main__':
 	#Estrutura de dados auxiliar para o processamento estatístico acerca dos resultados
 	lista_resultados = []
 	
-	#Abrir ficheiro
+	#Abrir ficheiro -emd.csv-
 	fd_emd = open('emd.csv', 'tr') 
 	
 	#Descartar a linha do cabeçalho
