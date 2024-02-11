@@ -89,7 +89,7 @@ if __name__ == '__main__':
 		intervalo = f"[{i},{i + salto}]"
 		#Iniciar contador -frequências- a 0
 		histograma_idades[ intervalo ] = 0
-		#Percorrer a lista com as idades
+		#Percorrer a lista com as idades -Theta (N)-
 		for idade in lista_idades:
 			#Testar se a idade está dentro do intervalo -escalão-
 			if idade >= i and idade < i + salto:
