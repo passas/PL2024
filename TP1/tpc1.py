@@ -77,18 +77,22 @@ if __name__ == '__main__':
 
 	'''Histograma'''
 	histograma_idades = {}
+	#Limite inferior de idades
 	limite_inferior = 5
-	limite_superior = 10
-	#Percorrer de 5 a 95 com um salto de 5 -i-
-	for i in range (0, 90, 5):
+	#Limite superior de idades
+	limite_superior = 95
+	#Intervalo entre as idades
+	salto = 5
+	#Percorrer de -limite inferior- até -limite superior- com um salto de -intervalo- -i-
+	for i in range (limite_inferior, limite_superior, salto):
 		#Definir intervalo -chave-
-		intervalo = f"[{limite_inferior + i},{limite_superior + i}]"
+		intervalo = f"[{i},{i + salto}]"
 		#Iniciar contador -frequências- a 0
 		histograma_idades[ intervalo ] = 0
 		#Percorrer a lista com as idades
 		for idade in lista_idades:
 			#Testar se a idade está dentro do intervalo -escalão-
-			if idade >= limite_inferior + i and idade < limite_superior + i:
+			if idade >= i and idade < i + salto:
 				#Aumentar a frequência dos atletas no intervalo -escalão-
 				histograma_idades[ intervalo ] += 1
 
