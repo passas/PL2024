@@ -32,7 +32,7 @@ if __name__ == '__main__':
 			set_modalidades.add ( modalidade )
 
 			#Extraír campo relevante -resultado-
-			#Separar a string -bool- do caractér de mudança de linha -\n-
+			#Separar a string resultado -bool- do caractér de mudança de linha -\n-
 			resultado_newline = campos[12].split('\n') #[bool,'\n']
 			#Adicionar a string resultado -bool- à lista de resultados
 			resultado = resultado_newline[0] #bool
