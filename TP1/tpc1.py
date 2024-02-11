@@ -16,7 +16,7 @@ if __name__ == '__main__':
 	#Descartar a linha do cabeçalho
 	discard_cabecalho = fd_emd.readline()
 
-	#Ler linha a linha
+	#Lêr linha a linha
 	for linha in fd_emd:
 			#Separar campos da linha (separados por vírgula)
 			campos = linha.split(',') #[_id, index, ...]
