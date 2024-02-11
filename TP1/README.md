@@ -3,9 +3,11 @@
 ├── emd.csv
 └── tpc1.py
 ```
+
 ```
 $ python3 tpc1.py
 ```
+\
 **Output:**
 ```
 ['Andebol', 'Atletismo', 'BTT', 'Badminton', 'Basquetebol', 'Ciclismo', 'Dança', 'Equitação', 'Esgrima', 'Futebol', 'Karaté', 'Orientação', 'Parapente', 'Patinagem', 'Triatlo']
