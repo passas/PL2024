@@ -33,9 +33,9 @@ if __name__ == '__main__':
 
 			#Extrair campo relevante -resultado-
 			#Separar a string -bool- do caractér de mudança de linha -\n-
-			campos_resultado_newline = campos[12].split('\n') #[bool,'\n']
+			resultado_newline = campos[12].split('\n') #[bool,'\n']
 			#Adicionar a string resultado -bool- à lista de resultados
-			resultado = campos_resultado_newline[0] #bool
+			resultado = resultado_newline[0] #bool
 			lista_resultados.append ( resultado )
 
 
