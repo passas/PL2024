@@ -21,7 +21,7 @@ if __name__ == '__main__':
 			#Separar campos da linha (separados por vírgula)
 			campos = linha.split(',') #[_id, index, ...]
 
-			#Extrair campo relevante -idade-
+			#Extraír campo relevante -idade-
 			idade = campos[5]
 			#Acrescentar a idade -int- à lista de idades
 			lista_idades.append ( int(idade) )
@@ -31,7 +31,7 @@ if __name__ == '__main__':
 			#Acrescentar modalidade ao conjunto
 			set_modalidades.add ( modalidade )
 
-			#Extrair campo relevante -resultado-
+			#Extraír campo relevante -resultado-
 			#Separar a string -bool- do caractér de mudança de linha -\n-
 			resultado_newline = campos[12].split('\n') #[bool,'\n']
 			#Adicionar a string resultado -bool- à lista de resultados
