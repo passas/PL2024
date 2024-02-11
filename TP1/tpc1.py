@@ -26,7 +26,7 @@ if __name__ == '__main__':
 			#Acrescentar a idade -int- à lista de idades
 			lista_idades.append ( int(idade) )
 
-			#Extrair campo relevante -modalidade-
+			#Extraír campo relevante -modalidade-
 			modalidade = campos[8]
 			#Acrescentar modalidade ao conjunto
 			set_modalidades.add ( modalidade )
