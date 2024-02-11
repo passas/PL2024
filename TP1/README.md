@@ -1,11 +1,11 @@
 ```
 .
 ├── emd.csv
-└── tp1.py
+└── tpc1.py
 ```
 
 ```
-$ python3 tp1.py
+$ python3 tpc1.py
 ```
 \
 **Output:**
