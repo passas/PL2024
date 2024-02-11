@@ -1,4 +1,9 @@
 ```
+.
+├── emd.csv
+└── tpc1.py
+```
+```
 $ python3 tpc1.py
 ```
 **Output:**
