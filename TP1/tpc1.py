@@ -18,25 +18,25 @@ if __name__ == '__main__':
 
 	#Lêr linha a linha
 	for linha in fd_emd:
-			#Separar campos da linha (separados por vírgula)
-			campos = linha.split(',') #[_id, index, ...]
+		#Separar campos da linha (separados por vírgula)
+		campos = linha.split(',') #[_id, index, ...]
 
-			#Extraír campo relevante -idade-
-			idade = campos[5]
-			#Acrescentar a idade -int- à lista de idades
-			lista_idades.append ( int(idade) )
+		#Extraír campo relevante -idade-
+		idade = campos[5]
+		#Acrescentar a idade -int- à lista de idades
+		lista_idades.append ( int(idade) )
 
-			#Extraír campo relevante -modalidade-
-			modalidade = campos[8]
-			#Acrescentar modalidade ao conjunto
-			set_modalidades.add ( modalidade )
+		#Extraír campo relevante -modalidade-
+		modalidade = campos[8]
+		#Acrescentar modalidade ao conjunto
+		set_modalidades.add ( modalidade )
 
-			#Extraír campo relevante -resultado-
-			#Separar a string resultado -bool- do caractér de mudança de linha -\n-
-			resultado_newline = campos[12].split('\n') #[bool,'\n']
-			#Adicionar a string resultado -bool- à lista de resultados
-			resultado = resultado_newline[0] #bool
-			lista_resultados.append ( resultado )
+		#Extraír campo relevante -resultado-
+		#Separar a string resultado -bool- do caractér de mudança de linha -\n-
+		resultado_newline = campos[12].split('\n') #[bool,'\n']
+		#Adicionar a string resultado -bool- à lista de resultados
+		resultado = resultado_newline[0] #bool
+		lista_resultados.append ( resultado )
 
 
 
