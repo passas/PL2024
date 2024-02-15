@@ -37,6 +37,9 @@ if __name__ == '__main__':
 		#Adicionar a string resultado -bool- à lista de resultados
 		resultado = resultado_newline[0] #bool
 		lista_resultados.append ( resultado )
+	
+	#Fechar ficheiro -emd.csv-
+	fd_emd.close()
 
 
 
