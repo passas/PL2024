@@ -1,6 +1,6 @@
 **To Do**
 ```
-> Doc.;
+> Documentação;
 
 > Bug Fix: Listas.
 ```
