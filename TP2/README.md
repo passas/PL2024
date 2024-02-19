@@ -4,5 +4,7 @@
 
 > Bug Fix: Listas;
 
-> Horizontal Rule (---).
+> Horizontal Rule (---);
+
+> Briefig das Regras Sintáticas.
 ```
