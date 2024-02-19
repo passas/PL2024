@@ -2,5 +2,7 @@
 ```
 > Documentação;
 
-> Bug Fix: Listas.
+> Bug Fix: Listas;
+
+> Horizontal Rule (---).
 ```
