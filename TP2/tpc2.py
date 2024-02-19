@@ -7,14 +7,17 @@ md_heading_1 = r'# (.*)'
 #H1 HTML -conversor-
 html_heading_1 = r'<h1>\1</h1>'
 
+
 #H2 MarkDown
 md_heading_2 = r'## (.*)'
 #H2 HTML -conversor-
 html_heading_2 = r'<h2>\1</h2>'
 
+
 #H3 MarkDown
 md_heading_3 = r'### (.*)'
 html_heading_3 = r'<h3>\1</h3>'
+
 
 '''Mecanismo de Isomorfismo para restituir Headers inválidos'''
 #H_Invalid MarkDown
@@ -27,35 +30,42 @@ html_heading_invalid_iso = r'<(#{4,})>(.*?)</\1>'
 md_heading_invalid_iso = r'\1 \2'
 '''- - -'''
 
+
 #Bold MarkDown
 md_bold = r'\*\*(.*)\*\*'
 #Bold HTML -conversor-
 html_bold = r'<strong>\1</strong>'
+
 
 #Italic MarkDown
 md_italic = r'\*(.*)\*'
 #Italic HTML -conversor-
 html_italic = r'<em>\1</em>'
 
+
 #BlockQuote MarkDown
 md_block_quote = r'> (.*)'
 #BlockQuote HTML -conversor-
 html_block_quote = r'<blockquote>\1</blockquote>'
+
 
 #Lista Desordenada Markdown
 md_list_unordered = r'([ ]?- (.*)\n?)+'
 #Lista Ordenada Markdown
 md_list_ordered = r'([ ]?\d+\. (.*)\n?)+'
 
+
 #Code MarkDown
 md_code = r'`(.*)`'
 #Code HTML -conversor-
 html_code = r'<code>\1</code>'
 
+
 #Image MarkDown
 md_image = r'!\[(.*?)\]\((.*?)\)'
 #Image HTML -conversor-
 html_image = r'<img src="\2" alt="\1">'
+
 
 #Link MarkDown
 md_link = r'\[(.*?)\]\((.*?)\)'
