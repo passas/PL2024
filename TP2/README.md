@@ -2,7 +2,5 @@
 ```
 > Doc.;
 
-> Briefing;
-
 > Bug Fix: Listas.
 ```
