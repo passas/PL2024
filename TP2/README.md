@@ -1,10 +1,10 @@
 **To Do**
 ```
-> Documentação;
+> Bug: Listas (captura multi-linha);
 
-> Bug Fix: Listas;
+> Feature: Horizontal Rule (---);
 
-> Horizontal Rule (---);
+> Briefing das Regras Sintáticas;
 
-> Briefig das Regras Sintáticas.
+> Feature: code (``) multi-line.
 ```
