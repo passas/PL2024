@@ -12,7 +12,8 @@ class Calculadora:
 		self._soma = 0.0
 
 	def soma (self, valor):
-		self._soma += valor
+		if self.estado == True:
+			self._soma += valor
 
 	def get_soma (self):
 		if self.estado == True:
