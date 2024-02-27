@@ -38,7 +38,12 @@ Faço a procura de todos os padrões numa linha com o ```re.finditer``` \[2\], q
 Itero a lista de Match Object's, e procedo à ação respetiva, mediante o nome da captura em causa ```match_object.lastgroup``` \[3\].\
 \
 _Nota:_ A minha expressão regular é um grupo de captura, onde engloba várias expressões regulares singulares, nomeadas.\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Para isso utilizei a propriedade de ```Match.group``` \[1\].
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Para isso utilizei a propriedade de ```Match.group``` \[1\].\
+\
+\
+O comportamento do somatório começa por estar ativo, aquando de uma captura de um dígito(s), a mesma é convertida para o homólogo em inteiro ```ìnt (...)``` e somada.\
+O comportamento é desligado aquando da captura do token respetivo, volta a ser retomado se indicado.\
+Em relação ao somatório, a informação do mesmo é imprimida no ecrã sempre que encontra o token respetivo à ordem em questão.\
 
 \
 \
