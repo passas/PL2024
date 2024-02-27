@@ -47,6 +47,7 @@ input_regex = r'(?P<soma>\d+)|(?P<ligar>[Oo][Nn])|(?P<desligar>[Oo][Ff]{2})|(?P<
 
 
 
+
 #Main
 if __name__ == '__main__':
 
