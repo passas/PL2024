@@ -10,6 +10,8 @@ tokens = [
    'WHERE',
    'RULE',
    'PARAMETER',
+
+   'COMMA',
 ]
 
 
@@ -52,7 +54,7 @@ def t_RULE(lexToken):
 #Tratar do token ID
 def t_ID (lexToken):
     #Definir
-    r'[a-zA-Z_][a-zA-Z_0-9]*([,]?)'
+    r'[a-zA-Z_][a-zA-Z_0-9]*'
 
     #Devolver
     return lexToken
@@ -61,7 +63,16 @@ def t_ID (lexToken):
 #Tratar do token PARAMETER
 def t_PARAMETER (lexToken):
     #Definir
-    r'(([a-zA-Z_][a-zA-Z_0-9]*)|(\d+))([,]?)'
+    r'(([a-zA-Z_][a-zA-Z_0-9]*)|(\d+))'
+
+    #Devolver
+    return lexToken
+
+
+#Tratar do token COMMA
+def t_COMMA (lexToken):
+    #Definir
+    r','
 
     #Devolver
     return lexToken
@@ -105,11 +116,11 @@ if __name__ == '__main__':
         #Percorrer os tokens encontrados e guardados no objeto lexer
         for tok in lexer:
             #-stdout-: (1) Tipo do token, e (2) conteúdo do token
-            print (f'{tok.type}: {tok.value}')
+                #print (f'{tok.type}: {tok.value}')
             
             '''
             Conjunto de operações plausíveis sobre o objeto token -LexToken-
-            #print(tok)
+            print(tok)
             #print(tok.type, tok.value, tok.lineno, tok.lexpos)
             '''
             
