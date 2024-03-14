@@ -13,14 +13,15 @@
 **To Do:**
 ```
 > Adicionar saldo -estado- à vending machine;
-  - Conversor de "moedas" em cêntimos.
+  - Conversor de "moedas" em euros.
+    - Conversor de euros em cêntimos (?)
 
 > Adicionar verificação de saldo de compra do produto à vending machine;
 
 > Adicionar compra do produto à vending machine;
 
 > Algoritmo de troco do moedeiro.
-  - Conversor de cêntimos -saldo- em moedas.
+  - Conversor de euros -saldo- em moedas.
 
 > Pretty-print do stock da Vendind Machine.
 ```
