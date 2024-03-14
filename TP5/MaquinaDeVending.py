@@ -11,6 +11,7 @@ class MaquinaDeVending:
 			'10c': 0,
 			'5c': 0,
 		}
+		self._saldo = 0.0 #euros -float-
 
 
 	def load_json (self, json_name):
