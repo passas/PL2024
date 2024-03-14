@@ -4,6 +4,13 @@ class MaquinaDeVending:
 
 	def __init__(self):
 		self._stock = []
+		self._moedeiro = {'2e': 0,
+			'1e': 0,
+			'50c': 0,
+			'20c': 0,
+			'10c': 0,
+			'5c': 0,
+		}
 
 
 	def load_json (self, json_name):
@@ -23,3 +30,11 @@ class MaquinaDeVending:
 			deep_stock.append (entrada.copy())
 
 		return deep_stock
+
+	def get_moedeiro (self):
+		deep_moedeiro = {}
+
+		for chave, valor in self._moedeiro.items():
+			deep_moedeiro[chave] = valor
+
+		return deep_moedeiro
