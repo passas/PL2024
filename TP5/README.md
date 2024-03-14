@@ -12,16 +12,13 @@
 \
 **To Do:**
 ```
+> Ingestor de moedas na vending machine: conversão/tradução de moedas em saldo;
 
-  > Conversor de "moedas" em euros.
-    > Conversor de euros em cêntimos (?)
+> Adicionar compra de um produto à vending machine;
 
-> Adicionar verificação de saldo de compra do produto à vending machine;
+> Algoritmo de troco do moedeiro;
 
-> Adicionar compra do produto à vending machine;
+> Pretty-print do stock da Vendind Machine;
 
-> Algoritmo de troco do moedeiro.
-  - Conversor de euros -saldo- em moedas.
-
-> Pretty-print do stock da Vendind Machine.
+> Interpretador de comandos da vending machine -REGEX-.
 ```
