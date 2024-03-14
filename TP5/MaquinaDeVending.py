@@ -2,7 +2,7 @@ import json
 
 class MaquinaDeVending:
 
-	def __init__(self):
+	def __init__(self, saldo=0.0):
 		self._stock = []
 		self._moedeiro = {'2e': 0,
 			'1e': 0,
@@ -11,7 +11,7 @@ class MaquinaDeVending:
 			'10c': 0,
 			'5c': 0,
 		}
-		self._saldo = 0.0 #euros -float-
+		self._saldo = saldo #euros -float-
 
 
 	def load_json (self, json_name):
@@ -32,6 +32,7 @@ class MaquinaDeVending:
 
 		return deep_stock
 
+
 	def get_moedeiro (self):
 		deep_moedeiro = {}
 
@@ -39,3 +40,20 @@ class MaquinaDeVending:
 			deep_moedeiro[chave] = valor
 
 		return deep_moedeiro
+
+
+	def codigo_valido (self, cod_produto):
+		for entrada in self._stock:
+			if cod_produto == entrada['cod']:
+				return True
+
+		return False
+
+
+	def saldo_bom (self, cod_produto):
+		for entrada in self._stock:
+			if cod_produto in entrada['cod']:
+				if self._saldo >= entrada['preco']:
+					return True
+
+		return False
