@@ -12,7 +12,5 @@
 \
 **To Do:**
 ```
-> Moedeiro dentro do objeto MaquinaDeVending;
-
 > Algoritmo de troco do moedeiro.
 ```
