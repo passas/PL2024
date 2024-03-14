@@ -12,9 +12,9 @@
 \
 **To Do:**
 ```
-> Adicionar saldo -estado- à vending machine;
-  - Conversor de "moedas" em euros.
-    - Conversor de euros em cêntimos (?)
+
+  > Conversor de "moedas" em euros.
+    > Conversor de euros em cêntimos (?)
 
 > Adicionar verificação de saldo de compra do produto à vending machine;
 
