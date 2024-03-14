@@ -22,3 +22,11 @@
 
 > Interpretador de comandos da vending machine -REGEX-.
 ```
+
+
+```
+ - MANIFESTO -
+
+O objetivo desta resolução é explorar as potencialidades da análise léxica na validação de *input* num programa.
+O progrma *per se* visa, por sua vez, explorar algumas técnicas de engenharia de software em python. Chamo em destaque a programação orientada a objectos, nomeadamente na classe que acarreta o estado e comportamento da Vending Machine; a mesma, por questões lúdicas, acarta computações relacionadas com cópias íntegras -deep- de coleções.
+```
