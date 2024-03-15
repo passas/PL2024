@@ -34,7 +34,7 @@ class MaquinaDeVending:
 		except:
 			pass
 
-			
+
 	#Exportar a lista de produtos segundo um formato JSON
 	def save_produtos_json (self, json_name):
 		with open(json_name, 'w', encoding='utf8') as dao_json:
@@ -58,13 +58,11 @@ class MaquinaDeVending:
 
 	#Convertêr saldo em string
 	def get_saldo (self):
-		euros = self._saldo % 1
+		saldo_centimos = self._saldo * 100
+		centimos = saldo_centimos % 100
+		euros = (saldo_centimos - centimos) / 100
 		euros = int (euros)
-
-		centimos = self._saldo - euros
-		centimos *= 100
 		centimos = int (centimos)
-
 		return f'{euros}e{centimos}c'
 
 	#Devolvêr uma cópia -deep- do estado intero relativo aos produtos
@@ -156,6 +154,17 @@ class MaquinaDeVending:
 						return False
 
 
+
+	def get_preco (self, cod_produto):
+		for entrada in self._stock:
+			if cod_produto in entrada['cod']:
+				saldo_centimos = entrada['preco'] * 100
+				centimos = saldo_centimos % 100
+				euros = (saldo_centimos - centimos) / 100
+				euros = int (euros)
+				centimos = int (centimos)
+				return f'{euros}e{centimos}c'
+
 	#Validar se existe stock do produto
 	def ha_stock (self, cod_produto):
 		for entrada in self._stock:
@@ -180,13 +189,17 @@ class MaquinaDeVending:
 								centimos = entrada['preco'] * 100
 								centimos_saldo = self._saldo * 100
 								self._saldo = (centimos_saldo - centimos) / 100
+								
+								nome = entrada['nome']
+								return f'Pode retirar o produto dispensado \"{nome}\"'
 					else:
 						return "Não há troco."
 				else:
 					return "Saldo insuficiente..."
 			else:
 				return "Stock inexistente..."
-
+		else:
+			return "Código inválido!"
 
 
 	#Montar o troco
