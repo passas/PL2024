@@ -3,7 +3,7 @@ import MaquinaDeVending
 #Main
 if __name__ == '__main__':
 
-	maquina = MaquinaDeVending.MaquinaDeVending(saldo=0.5)
+	maquina = MaquinaDeVending.MaquinaDeVending()
 
 	maquina.load_json ("produtos.json")
 
@@ -11,6 +11,8 @@ if __name__ == '__main__':
 		print (stock)
 
 	print (maquina.get_moedeiro())
+
+	maquina.moeda_to_eur ('50c')
 
 	print (f'Tem A000? {maquina.codigo_valido("A000")}')
 
