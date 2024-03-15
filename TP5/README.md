@@ -1,32 +1,47 @@
-* Intendo:
 
-  > Montar um objeto referente à máquina de vending: (1) estado e (2) comportamento. Numa fase inicial, o próprio 'DAO' estará inserido dentro da própria classe. O DAO é referente à leitura e escrita dos dados da máquina em ficheiro(s) JSON.
+# Vending Machine
 
-  > O interpretador de comandos será, nesta fase, codificado na main através de um tokenizer (ou lexer, mediante a complexidade e inteligibilidade do código).
+```Sérgio Miguel Cabral Passinhas dos Santos Costa :: A81215```
 
- * Objetivo:
+## Conteúdo
++ Tree
++ How-To
++ Objetivo do Trabalho
++ Abstract
++ Trabalho Futuro
 
-   > Mantêr o programa coeso e pequeno.
+## Tree
+Primeira utilização:
+```
+.
+├── MaquinaDeVending.py
+├── produtos.json
+└── tpc5.py
+```
+Primeira e posterior utilização:
+```
+.
+├── MaquinaDeVending.py
+├── moedeiro.json
+├── produtos.json
+└── tpc5.py
+```
+## How-To
 
+```$ python3 tpc5.py```\
+A partir daqui seguem-se os comandos válidos do enunciado.\
+*Explicitar comandos válidos*
+
+## Objetivo do Trabalho
+O objetivo desta resolução é explorar as potencialidades da análise léxica na validação de *input* num programa.\
+O progrma *per se* visa, por sua vez, explorar algumas técnicas de engenharia de software em python. Chamo em destaque a programação orientada a objectos, nomeadamente na classe que acarreta o estado e comportamento da Vending Machine; a mesma, por questões lúdicas, acarta computações relacionadas com cópias íntegras -deep- de coleções.\
 \
-\
-**To Do:**
+O trabalho segue uma separação Controlador-Model-Viewer, sendo que o Controlador e o Viewer encontram-se fundidos em ```tpc5.py``` e o Model em ```MaquinaDeVending.py```.\
+Segue uma persistência dos produtos e do moedeiro (estado do número de moedas na máquina) em ficheiros json. O stock só consegue ser alterado a partir deste ficheiro.
+
+## Abstract
+
+## Trabalho Futuro
 ```
-> Ingestor de moedas na vending machine: conversão/tradução de moedas em saldo;
-
-> Adicionar compra de um produto à vending machine;
-
-> Algoritmo de troco do moedeiro;
-
-> Pretty-print do stock da Vendind Machine;
-
-> Interpretador de comandos da vending machine -REGEX-.
-```
-
-
-```
- - MANIFESTO -
-
-O objetivo desta resolução é explorar as potencialidades da análise léxica na validação de *input* num programa.
-O progrma *per se* visa, por sua vez, explorar algumas técnicas de engenharia de software em python. Chamo em destaque a programação orientada a objectos, nomeadamente na classe que acarreta o estado e comportamento da Vending Machine; a mesma, por questões lúdicas, acarta computações relacionadas com cópias íntegras -deep- de coleções.
+> Operações de saldo e preços em cêntimos; arredondamentos bugam o estado do programa.
 ```
