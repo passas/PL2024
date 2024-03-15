@@ -42,7 +42,7 @@ class MaquinaDeVending:
 		return deep_moedeiro
 
 
-	def moeda_to_eur (self, moeda):
+	def insere_moeda (self, moeda):
 		conversor = {'2e': 2.0,
 			'1e': 1.0,
 			'50c': 0.5,
@@ -52,6 +52,9 @@ class MaquinaDeVending:
 		}
 		
 		self._saldo += conversor[moeda]
+
+		self._moedeiro[moeda] += 1
+
 
 	def codigo_valido (self, cod_produto):
 		for entrada in self._stock:
@@ -68,3 +71,50 @@ class MaquinaDeVending:
 					return True
 
 		return False
+
+	def get_troco (self):
+		conversor = {'2e': 2.0,
+			'1e': 1.0,
+			'50c': 0.5,
+			'20c': 0.2,
+			'10c': 0.1,
+			'5c': 0.05,
+		}
+
+		troco = 0.0
+		for k,v in self._moedeiro.items():
+			if v > 0:
+				troco += v * conversor[k]
+
+		return troco
+
+	def ha_troco (self, cod_produto):
+		for entrada in self._stock:
+			if cod_produto in entrada['cod']:
+				if self._saldo >= entrada['preco']:
+					
+					excedente = self._saldo - entrada['preco']
+					
+					if (excedente <= self.get_troco()):
+						return True
+					else:
+						return False
+
+	def ha_stock (self, cod_produto):
+		for entrada in self._stock:
+			if cod_produto in entrada['cod']:
+				if entrada['quant'] > 0:
+					return True
+				else:
+					return False
+
+
+	def retira_produto (self, cod_produto):
+		if self.codigo_valido (cod_produto):
+			if self.ha_stock (cod_produto):
+				if self.saldo_bom (cod_produto):
+					if self.ha_troco (cod_produto):
+
+						for entrada in self._stock:
+							if cod_produto in entrada['cod']:
+								entrada['quant'] -= 1
