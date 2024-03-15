@@ -24,16 +24,36 @@ class MaquinaDeVending:
 
 
 	#Carregar a lista de produtos segundo um formato JSON
-	def load_json (self, json_name):
-		with open(json_name, 'r') as dao_json:
-			self._stock = json.load (dao_json)
-		#Ordenar
-		self.ordenar_por_codigo()
+	def load_produtos_json (self, json_name):
+		try:
+			with open(json_name, 'r') as dao_json:
+				if dao_json:
+					self._stock = json.load (dao_json)
+			#Ordenar
+			self.ordenar_por_codigo()
+		except:
+			pass
 
+			
 	#Exportar a lista de produtos segundo um formato JSON
-	def save_json (self, json_name):
+	def save_produtos_json (self, json_name):
 		with open(json_name, 'w', encoding='utf8') as dao_json:
 			json.dump(self._stock, dao_json, ensure_ascii=False, indent=4)
+
+
+	#Carregar o estado do moedeiro segundo um formato JSON
+	def load_moedeiro_json (self, json_name):
+		try:
+			with open(json_name, 'r') as dao_json:
+				self._moedeiro = json.load (dao_json)
+		except:
+			pass
+
+
+	#Gravar o estado do moedeiro segundo um formato JSON
+	def save_moedeiro_json (self, json_name):
+		with open(json_name, 'w', encoding='utf8') as dao_json:
+			json.dump(self._moedeiro, dao_json, ensure_ascii=False, indent=4)
 
 
 	#Convertêr saldo em string
