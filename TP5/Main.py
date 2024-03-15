@@ -12,7 +12,9 @@ if __name__ == '__main__':
 
 	print (maquina.get_moedeiro())
 
-	maquina.moeda_to_eur ('50c')
+	maquina.insere_moeda ('50c')
+
+	print (maquina.get_moedeiro())
 
 	print (f'Tem A000? {maquina.codigo_valido("A000")}')
 
@@ -23,4 +25,6 @@ if __name__ == '__main__':
 		bom = maquina.saldo_bom(entrada['cod'])
 		print (f'Posso comprar? {bom}')
 
-	maquina.save_json ("teste_save_json.json")
+	maquina.retira_produto ("A23")
+
+	maquina.save_json ("produtos.json")
