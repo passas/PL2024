@@ -43,5 +43,7 @@ Segue uma persistência dos produtos e do moedeiro (estado do número de moedas 
 
 ## Trabalho Futuro
 ```
-> Operações de saldo e preços em cêntimos; arredondamentos bugam o estado do programa.
+> Operações de saldo e preços em cêntimos; arredondamentos bugam o estado do programa;
+
+> Documentação.
 ```
