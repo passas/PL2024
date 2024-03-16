@@ -43,7 +43,7 @@ def t_MOEDA(tok):
 
     r'MOEDA\s((2e|1e|50c|20c|10c|5c)[\s,]+)*((2e|1e|50c|20c|10c|5c)[\s.]*)'
 
-    moedas = re.findall (r'(2e|1e|50c|20c|10c|5c)', tok.value)
+    moedas = re.findall (r'2e|1e|50c|20c|10c|5c', tok.value)
 
     for moeda in moedas:
         maquina.insere_moeda (moeda)
@@ -51,19 +51,20 @@ def t_MOEDA(tok):
     print (f'maq: Saldo = {maquina.get_saldo()}')
 
 
-#Tratar do token WHERE
+#Tratar do token SELECIONAR
 def t_SELECIONAR(tok):
 
     r'SELECIONAR\s(A\d+)'
     
-    produto = re.search (r'(A\d+)', tok.value)
-    produto = produto.group(1)
+    produto = re.search (r'A\d+', tok.value)
+    produto = produto.group(0)
 
     warning = maquina.retira_produto (produto)
     print (warning)
 
     if warning == "Saldo insuficiente...":
         print (f'maq: Saldo = {maquina.get_saldo()}; Pedido = {maquina.get_preco(produto)}')
+
 
 
 
