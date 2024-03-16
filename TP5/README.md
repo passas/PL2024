@@ -46,4 +46,7 @@ Segue uma persistência dos produtos e do moedeiro (estado do número de moedas 
 > Operações de saldo e preços em cêntimos; arredondamentos bugam o estado do programa;
 
 > Documentação.
+
+
+> Reconhecêr indisponibilidade de troco: (1) perguntar se quer continuar, (2) gerar uma ref. para contactar o suporte.
 ```
